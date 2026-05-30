@@ -1,6 +1,6 @@
 // components/ProjectCard.tsx
-import Link from 'next/link';
-import Image from 'next/image';
+// import Link from 'next/link';
+// import Image from 'next/image';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
 interface Project {

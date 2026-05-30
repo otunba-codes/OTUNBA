@@ -37,7 +37,7 @@ const ContactForm = () => {
     <div className="max-w-lg mx-auto">
       {isSubmitted && (
         <div className="mb-6 p-4 bg-green-100 text-green-700 rounded-lg transition-opacity duration-300">
-          Thank you for your message! I'll get back to you soon.
+          Thank you for your message! I&apos;ll get back to you soon.
         </div>
       )}
       

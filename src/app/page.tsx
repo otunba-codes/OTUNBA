@@ -4,6 +4,7 @@ import { FiArrowRight, FiExternalLink, FiGithub } from "react-icons/fi";
 import { SITE } from '@/lib/constants';
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
+import Image from "next/image";
 
 export const metadata = generateMetadata({
   title: "Home",
@@ -13,21 +14,24 @@ export const metadata = generateMetadata({
 const featuredProjects = [
   {
     id: 1,
-    title: "Quiz App",
-    description: "Interactive quiz application with multiple categories, score tracking, and responsive design.",
-    technologies: ["React", "Next.js", "Tailwind CSS"],
-    liveUrl: "https://quizz0.vercel.app/",
-    githubUrl: "#",
+    title: 'Sales & Inventory Accounting System',
+    description: 'Business management platform for tracking sales, inventory levels, and accounting operations with real-time analytics.',
+    technologies: ['Node.js', 'Express', 'MongoDB', 'React', 'Tailwind CSS'],
+    liveUrl: '#',
+    githubUrl: '#',
+    image: null,
   },
   {
     id: 2,
-    title: "Ecommerce App",
-    description: "Scalable online store with product listings, search functionality, and smooth checkout flow.",
-    technologies: ["React", "Context API", "CSS Modules"],
-    liveUrl: "https://shop2-32r.pages.dev/",
-    githubUrl: "#",
+    title: 'VTU & Bill Payment Platform',
+    description: 'Payment platform supporting airtime, data, electricity, and utility bills with multiple gateway integrations.',
+    technologies: ['Node.js', 'Express', 'MongoDB', 'JWT', 'Payment Gateway'],
+    liveUrl: 'https://payo-one.vercel.app',
+    githubUrl: '#',
+    image: '/payo.jpeg',
   },
 ];
+
 
 export default function Home() {
   return (
@@ -38,7 +42,7 @@ export default function Home() {
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">{SITE.name}</span>
+            Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">{SITE.name}</span>
           </h1>
           <p className="text-[30px] md:text-2xl font-semibold text-gray-800 mb-3">
             Software Engineer
@@ -90,26 +94,41 @@ export default function Home() {
                 className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
+                {/* Image Section */}
                 <div className="h-48 bg-gradient-to-r from-blue-50 to-indigo-50 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {project.image ? (
+                    <Image 
+                      src={project.image} 
+                      alt={project.title} 
+                      fill
+                      className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+                      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 right-4 flex gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-                    {project.liveUrl && (
+                    {project.liveUrl && project.liveUrl !== '#' && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 bg-white rounded-full text-gray-700 hover:text-blue-600 transition-colors"
+                        className="p-2 bg-white rounded-full text-gray-700 hover:text-blue-600 transition-colors shadow-md"
                         aria-label="Live Demo"
                       >
                         <FiExternalLink className="h-4 w-4" />
                       </a>
                     )}
-                    {project.githubUrl && (
+                    {project.githubUrl && project.githubUrl !== '#' && (
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 bg-white rounded-full text-gray-700 hover:text-blue-600 transition-colors"
+                        className="p-2 bg-white rounded-full text-gray-700 hover:text-blue-600 transition-colors shadow-md"
                         aria-label="GitHub Repository"
                       >
                         <FiGithub className="h-4 w-4" />
@@ -117,10 +136,24 @@ export default function Home() {
                     )}
                   </div>
                 </div>
+                
+                {/* Content Section */}
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    {project.title}
-                  </h3>
+                  {/* Clickable Title */}
+                  {project.liveUrl && project.liveUrl !== '#' ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors inline-block"
+                    >
+                      {project.title}
+                    </a>
+                  ) : (
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {project.title}
+                    </h3>
+                  )}
                   <p className="text-gray-600 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
@@ -147,7 +180,7 @@ export default function Home() {
               About Me
             </h2>
             <p className="text-gray-600 mb-4">
-              I'm a Software Engineer focused on building backend services, APIs, and business platforms.
+              I&apos;m a Software Engineer focused on building backend services, APIs, and business platforms.
             </p>
             <p className="text-gray-600 mb-8">
               I specialize in <strong>Node.js, Express, React, Next.js, TypeScript, and MongoDB</strong>. 
@@ -171,10 +204,10 @@ export default function Home() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-            Let's Build Something Amazing
+            Let&apos;s Build Something Amazing
           </h2>
           <p className="text-gray-600 mb-8">
-            Have a project idea or need a robust backend system? Let's connect.
+            Have a project idea or need a robust backend system? Let&apos;s connect.
           </p>
           <Link
             href="/contact"

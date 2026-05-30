@@ -18,7 +18,7 @@ export default function Contact() {
       <header className="mb-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Get In Touch</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Have a project in mind? Need a robust backend system or API? Let's talk.
+          Have a project in mind? Need a robust backend system or API? Let&apos;s talk.
         </p>
       </header>
 
@@ -37,7 +37,7 @@ export default function Contact() {
                   <a href={`mailto:${SITE.email}`} className="text-lg text-blue-600 hover:text-blue-700 font-semibold">
                     {SITE.email}
                   </a>
-                  <p className="text-sm text-gray-500 mt-1">I'll respond within 24-48 hours</p>
+                  <p className="text-sm text-gray-500 mt-1">I&apos;ll respond within 24-48 hours</p>
                 </div>
               </div>
             </div>
@@ -150,9 +150,9 @@ export default function Contact() {
       
       {/* Call to Action */}
       <section className="text-center mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 p-10 rounded-xl shadow-sm">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Let's Build Something Great!</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Let&apos;'s Build Something Great!</h2>
         <p className="text-gray-600 mb-6">
-          Have an API to build, a system to scale, or a platform to launch? I'm ready to help.
+          Have an API to build, a system to scale, or a platform to launch? I&apos;m ready to help.
         </p>
         <a
           href={`mailto:${SITE.email}`}

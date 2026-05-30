@@ -2,7 +2,7 @@ import { generateMetadata } from '@/components/SEO';
 import Footer from '@/components/ui/Footer';
 import Navbar from '@/components/ui/Navbar';
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
 export const metadata = generateMetadata({
@@ -75,7 +75,7 @@ export default function Projects() {
         <header className="mb-16 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Projects</h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Here are some of the <strong>web applications, APIs, and business systems</strong> I've built.
+            Here are some of the <strong>web applications, APIs, and business systems</strong> I&apos;ve built.
           </p>
         </header>
 
@@ -169,7 +169,7 @@ export default function Projects() {
         <section className="text-center mt-16 bg-gray-50 rounded-2xl p-10">
           <h2 className="text-2xl font-bold text-gray-900 mb-3">More Projects Coming</h2>
           <p className="text-gray-600">
-            I'm constantly building new systems and APIs. Check back for updates.
+            I&apos;m constantly building new systems and APIs. Check back for updates.
           </p>
         </section>
       </div>

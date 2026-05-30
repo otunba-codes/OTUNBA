@@ -40,7 +40,7 @@ export default function About() {
       <section className="mb-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About Me</h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          I'm a <strong>Fullstack Developer | Software Engineer | API & Web Systems Developer</strong> focused on building APIs, scalable systems, and business platforms that solve real problems.
+          I&apos;m a <strong>Fullstack Developer | Software Engineer | API & Web Systems Developer</strong> focused on building APIs, scalable systems, and business platforms that solve real problems.
         </p>
         <p className="text-md text-gray-500 max-w-2xl mx-auto mt-4">
           My expertise includes payment integrations, multi-tenant architecture, and transaction-based systems for fintech and business platforms.

@@ -3,7 +3,7 @@ export const SITE = {
   description: "Software Engineer focused on API development, scalable web systems, and transaction-based platforms. Building robust backend infrastructure and modern web applications.",
   url: "https://otunba.vercel.app",
   twitter: "@yourhandle",
-  defaultImage: "/og-image.jpg",
+  defaultImage: "/og-image.png",
   phone: "+234 XXX XXX XXXX", // Replace with your actual WhatsApp number
   keywords: [
     "software engineer",

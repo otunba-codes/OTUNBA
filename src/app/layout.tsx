@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE.name} - Developer & Designer`,
+    default: `${SITE.name} - Software Developer`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE.url,
     siteName: SITE.name,
-    title: `${SITE.name} - Developer & Designer`,
+    title: `${SITE.name} - Software Developer`,
     description: SITE.description,
     images: [
       {

@@ -8,7 +8,7 @@ export default function PortfolioCV() {
   return (
     <>
     <Navbar />
-    <div className="min-h-screen bg-gray-100 px-6 py-10 pt-24">
+    <div className="min-h-screen bg-gray-100 px-2 py-10 pt-24">
       <div className="max-w-4xl mx-auto">
         
         {/* Resume Card with Border */}
@@ -19,7 +19,7 @@ export default function PortfolioCV() {
           className="bg-white border-2 border-gray-300 rounded-2xl shadow-lg overflow-hidden"
         >
           {/* Inner Content with Padding */}
-          <div className="p-8 md:p-10">
+          <div className="p-8 px-4 md:p-10">
             
             {/* HEADER */}
             <div className="mb-10">

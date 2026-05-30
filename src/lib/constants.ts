@@ -17,7 +17,7 @@ export const SITE = {
     "fintech",
     "payment systems",
   ],
-  github: "https://github.com/yourusername",
+  github: "https://github.com/otunba-codes",
   linkedin: "https://linkedin.com/in/otunba-odubanjo-2296b6239",
   email: "otunbaodubanjo@gmail.com",
 };

@@ -43,7 +43,7 @@ export default function Contact() {
             </div>
 
             {/* WhatsApp / Phone - Secondary CTA */}
-            <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+            {/* <div className="bg-green-50 rounded-lg p-4 border border-green-200">
               <div className="flex items-start">
                 <FaWhatsapp className="h-6 w-6 text-green-600 mt-1" />
                 <div className="ml-3">
@@ -54,7 +54,7 @@ export default function Contact() {
                   <p className="text-sm text-gray-500 mt-1">For quick questions or urgent inquiries</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Social Links */}
@@ -150,7 +150,7 @@ export default function Contact() {
       
       {/* Call to Action */}
       <section className="text-center mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 p-10 rounded-xl shadow-sm">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Let&apos;'s Build Something Great!</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Let&apos;s Build Something Great!</h2>
         <p className="text-gray-600 mb-6">
           Have an API to build, a system to scale, or a platform to launch? I&apos;m ready to help.
         </p>
